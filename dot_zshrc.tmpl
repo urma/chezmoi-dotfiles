@@ -133,3 +133,8 @@ fi
 if ( which xclip > /dev/null 2>&1 ) ; then
   alias xclip='xclip -selection clipboard'
 fi
+
+# 2019-03-13/{{ .chezmoi.username }}: Add Rust cargo binaries to PATH
+if [ -d "${HOME}/.cargo/bin" ] ; then
+  export PATH="${PATH}:${HOME}/.cargo/bin"
+fi
