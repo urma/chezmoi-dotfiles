@@ -138,3 +138,10 @@ fi
 if [ -d "${HOME}/.cargo/bin" ] ; then
   export PATH="${PATH}:${HOME}/.cargo/bin"
 fi
+
+# 2019-06-11/urma: Set bat (https://github.com/sharkdp/bat)
+# theme, if installed
+if ( which bat > /dev/null 2>&1 ) ; then
+  export BAT_THEME=base16
+fi
+
